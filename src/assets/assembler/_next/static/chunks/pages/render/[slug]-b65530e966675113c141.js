@@ -1,0 +1,2 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[27],{fiW7:function(n,_,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/render/[slug]",function(){return w("hDbA")}])},hDbA:function(n,_,w){"use strict";w.r(_);var i=w("Cdwm"),e=w("OhZv");_.default=Object(i.a)({Head:e.a})}},[["fiW7",0,1,6,13,12,10,9,8,15,11,2,3,5,4,7,14,18]]]);
+//# sourceMappingURL=[slug]-b65530e966675113c141.js.map
