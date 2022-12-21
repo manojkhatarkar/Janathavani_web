@@ -290,6 +290,7 @@ export default {
                 });
         },
         catData(id) {
+            this.page2=1;
             this.id = id;
             const axios = require("axios");
             var self = this;
@@ -307,7 +308,7 @@ export default {
                         self.allProducts = data.product;
                         self.newAry=data.product;
                         self.totalCount = data.count
-                        self.changePage()
+                        self.changePage();
                         // console.log('sadadadadsadad');
                         // console.log(self.allProducts)
                     }

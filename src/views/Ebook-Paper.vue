@@ -3,10 +3,16 @@
     <!-- <button @click="interact" type="=:button">Interact with page</button> -->
     <!-- <VuePdfApp @after-created="afterCreated" page-scale="20" :pdf="$root.URL_ROOT+'uploads/Ebook/'+ebook.file" />  -->
     <!-- <embed :src="$root.URL_ROOT+'uploads/Ebook/'+ebook.file" style="width:100%;height:100%;" /> -->
-    <iframe :src="$root.URL_ROOT+'uploads/Ebook/'+ebook.file" style="width:100%;height:100%;"></iframe>
+    <!-- <iframe :src="$root.URL_ROOT+'uploads/Ebook/'+ebook.file" style="width:100%;height:100%;"></iframe> -->
 
     
     
+
+      <div class="graph-outline">
+        <object style="width:100%;" :data="$root.URL_ROOT+'uploads/Ebook/'+ebook.file+'?#zoom=85&scrollbar=0&toolbar=0&navpanes=0'" type="application/pdf">
+          <embed :src="$root.URL_ROOT+'uploads/Ebook/'+ebook.file+'?#zoom=85&scrollbar=0&toolbar=0&navpanes=0'" type="application/pdf" />
+        </object>
+      </div>
   
   </div>
 </template>

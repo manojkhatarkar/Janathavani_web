@@ -869,12 +869,22 @@ export default {
 
                     }
                 }).then(function(response) {
-                    var data = response.data.data
+                    var data = response.data
                     //ev.orderDetailData = data
-                    ev.getCommentsData();
+                    if(data.status=='success'){
+                        ev.$toasted.global.success({
+                            message: data.msg
+                        });
+                        ev.getCommentsData();
+                    }else{
+                        ev.$toasted.global.error({
+                            message: data.msg,
+                        });
+                    }
+                   
                 })
             } else {
-                this.$toasted.global.error({
+                ev.$toasted.global.error({
                     message: "Please Sign in ",
                 });
             }

@@ -608,7 +608,16 @@ export default {
                 }).then(function(response) {
                     var data = response.data.data
                     //ev.orderDetailData = data
-                    ev.getCommentsData();
+                    if(data.status=='success'){
+                        ev.$toasted.global.success({
+                            message: data.msg
+                        });
+                        ev.getCommentsData();
+                    }else{
+                        ev.$toasted.global.error({
+                            message: data.msg,
+                        });
+                    }
                 })
             } else {
                 this.$toasted.global.error({
@@ -640,8 +649,18 @@ export default {
                         cid: cid,
                     }
                 }).then(function(response) {
-                    var data = response.data.data
-                    ev.getCommentsData();
+                    var data = response.data
+                    
+                    if(data.status=='success'){
+                        ev.$toasted.global.success({
+                            message: data.msg
+                        });
+                        ev.getCommentsData();
+                    }else{
+                        ev.$toasted.global.error({
+                            message: data.msg,
+                        });
+                    }
                 })
 
 
